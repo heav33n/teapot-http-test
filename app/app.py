@@ -15,7 +15,7 @@ app = FastAPI(
 app.frontend("/", directory="dist")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://teapot-http-test-production.up.railway.app", "https://http://teapot-http-test-production.up.railway.app/api/response?is_tea=true"],
+    allow_origins=["http://teapot-http-test-production.up.railway.app", "https://teapot-http-test-production.up.railway.app/api/response?is_tea=true"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
