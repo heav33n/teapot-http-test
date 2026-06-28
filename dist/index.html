@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>TestApp</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      #response_section {
+        display: none;
+      }
+      #raw_section {
+        display: none;
+      }
+      #response {
+        margin-top: 0px;
+      }
+      #more_info {
+        margin-left: 10px;
+        transform: translateY(-6px);
+      }
+      #status_code {
+        font-size: 28px;
+      }
+      #raw_resp {
+        background-color: #ccc;
+        border: solid 2px #a3a3a3;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi I'm a Teapot</h1>
+
+    <section id="response_section">
+      <a id="status_code" target="_blank" href=""></a>
+      <p id="more_info">&lt; Click this for more info.</p>
+    </section>
+
+    <p id="response"></p>
+
+    <section>
+      <button onclick="getResponse()">Make coffee</button>
+      <button onclick="getResponse(true)">Make tea</button>
+    </section>
+
+    <section id="raw_section">
+      <p>Raw response:</p>
+      <code id="raw_resp"></code>
+    </section>
+  </body>
+  <script src="assets/app.js"></script>
+</html>
