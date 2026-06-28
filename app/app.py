@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 app = FastAPI(
@@ -13,15 +12,6 @@ app = FastAPI(
 )
 
 app.frontend("/", directory="dist")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "https://teapot-http-test-production.up.railway.app/api/response?is_tea=true"
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 
 @app.get("/api/response")

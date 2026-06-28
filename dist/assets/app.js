@@ -1,14 +1,7 @@
 async function getResponse(is_tea) {
   try {
-    if (is_tea) {
-      var url =
-        "https://teapot-http-test-production.up.railway.app/api/response?is_tea=true";
-      var response = await fetch(url);
-    } else {
-      var url =
-        "https://teapot-http-test-production.up.railway.app/api/response?is_tea=false";
-      var response = await fetch(url);
-    }
+    const url = `/api/response?is_tea=${Boolean(is_tea)}`;
+    const response = await fetch(url);
 
     const data = await response.json();
 
