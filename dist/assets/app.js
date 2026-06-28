@@ -1,10 +1,10 @@
 async function getResponse(is_tea) {
   try {
     if (is_tea) {
-      var url = "/api/response?is_tea=true";
+      var url = "http://teapot-http-test-production.up.railway.app/api/response?is_tea=true";
       var response = await fetch(url);
     } else {
-      var url = "/api/response?is_tea=false";
+      var url = "http://teapot-http-test-production.up.railway.app/api/response?is_tea=false";
       var response = await fetch(url);
     }
 
