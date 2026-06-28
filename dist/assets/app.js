@@ -1,10 +1,10 @@
 async function getResponse(is_tea) {
   try {
     if (is_tea) {
-      var url = "http://127.0.0.1:8000/api/response?is_tea=true";
+      var url = "/api/response?is_tea=true";
       var response = await fetch(url);
     } else {
-      var url = "http://127.0.0.1:8000/api/response?is_tea=false";
+      var url = "/api/response?is_tea=false";
       var response = await fetch(url);
     }
 
